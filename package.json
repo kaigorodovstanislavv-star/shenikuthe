@@ -1,0 +1,10 @@
+{
+    "name": "shenikuthe-monorepo",
+    "version": "1.0.0",
+    "description": "pnpm monorepo with React frontend and Express backend",
+    "private": true,
+    "scripts": {
+          "build": "pnpm install -r && pnpm run build",
+          "start": "node --enable-source-maps ./artifacts/api-server/dist/index.mjs"
+    }
+}
