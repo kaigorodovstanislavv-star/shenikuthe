@@ -4,7 +4,7 @@ services:
           runtime: node
               plan: free
                   rootDirectory: .
-                      buildCommand: pnpm install && pnpm run build
+                      buildCommand: pnpm install -r && pnpm run build
                           startCommand: node --enable-source-maps ./artifacts/api-server/dist/index.mjs
                               envVars:
                                     - key: NODE_ENV
