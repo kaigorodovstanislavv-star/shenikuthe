@@ -1,16 +1,17 @@
 services:
   - type: web
-    name: shenikuthe
-    runtime: node
-    plan: free
-    buildCommand: pnpm install && pnpm run build
-    startCommand: node --enable-source-maps ./artifacts/api-server/dist/index.mjs
-    envVars:
-      - key: NODE_ENV
-        value: production
-      - key: PORT
-        value: 10000
-      - key: BASE_PATH
-        value: /
-    region: oregon
-    autoDeployOnPush: true
+      name: shenikuthe
+          runtime: node
+              plan: free
+                  rootDirectory: .
+                      buildCommand: pnpm install && pnpm run build
+                          startCommand: node --enable-source-maps ./artifacts/api-server/dist/index.mjs
+                              envVars:
+                                    - key: NODE_ENV
+                                            value: production
+                                                  - key: PORT
+                                                          value: 10000
+                                                                - key: BASE_PATH
+                                                                        value: /
+                                                                            region: oregon
+                                                                                autoDeployOnPush: true
