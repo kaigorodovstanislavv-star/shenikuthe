@@ -4,7 +4,7 @@
     "description": "pnpm monorepo with React frontend and Express backend",
     "private": true,
     "scripts": {
-          "build": "pnpm install -r && pnpm run build",
+              "build": "pnpm install -r --filter=api-server && pnpm --filter=api-server run build",
           "start": "node --enable-source-maps ./artifacts/api-server/dist/index.mjs"
     }
 }
