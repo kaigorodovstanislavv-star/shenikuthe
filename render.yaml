@@ -1,0 +1,13 @@
+services:
+  - type: web
+      name: shenikuthe
+          runtime: node
+              startCommand: "node --enable-source-maps ./artifacts/api-server/dist/index.mjs"
+                  buildCommand: "pnpm install -r --filter=api-server && pnpm --filter=api-server run build"
+                      envVars:
+                            - key: NODE_ENV
+                                    value: production
+                                          - key: PORT
+                                                  value: "10000"
+                                                        - key: BASE_PATH
+                                                                value: /
